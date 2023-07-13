@@ -52,8 +52,55 @@ function CompareGuesses( Guess , ComputerGuess){
 
 }
 
+function game(){
+    
+    let score = 0
+    let continuePlaying =1
+    let rounds = 0
+   
+    while(continuePlaying){
+        //count the number of rounds
+        rounds++;
+        //################################
 
-const playerSelection = 'Rock'
-const ComputerSelection = GetRandomRockPaperScissor()
-console.log(ComputerSelection)
-console.log(CompareGuesses(playerSelection , ComputerSelection))
+        //Get the two guesses
+        let playerSelection = prompt('Rock paper scissor')
+        let ComputerSelection = GetRandomRockPaperScissor()
+        //#################################
+
+        //compare the two guesses
+        let result = CompareGuesses(playerSelection , ComputerSelection)
+        //#############################
+
+        //test the result of the round
+
+        console.log(result)
+        
+        //###############################
+        
+        //determine the winner of the round
+
+        let resultWords = result.split(" ")
+
+        if(resultWords[1] == 'win'){
+            score++
+        }
+        //#########################
+
+        //check if he wants to continue playing
+        continuePlaying = parseInt(
+            prompt('do you want to play again?/n press 1 to continue and 0 to stop')
+            )
+            
+    }
+
+    //determine the winner of the whole game
+    if(score >= (rounds/2) ){
+        return 'You win'
+    }
+
+    return'You lose'
+}
+
+
+console.log(game())
