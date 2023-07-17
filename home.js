@@ -89,7 +89,7 @@ function game(){
 
         //check if he wants to continue playing
         continuePlaying = parseInt(
-            prompt('do you want to play again?/n press 1 to continue and 0 to stop')
+            prompt('do you want to play again?/n press 1 to continue and 0 to stop' , '0' )
             )
             
     }
