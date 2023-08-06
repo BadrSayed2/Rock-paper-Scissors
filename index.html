@@ -2,10 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="home.js"></script>
+    <script src="home.js" defer></script>
+    <link rel="stylesheet" href="home.css">
     <title>Home</title>
 </head>
 <body>
+    <div class="container">
+        <div class="guesses">
+            <button id="rock">rock</button>
+            <button id="paper">paper</button>
+            <button id="scissors">scissors</button>
+        </div>
+        
+        <div class="game">
+            <button class="play">play a round</button>
+            <button class="finish">finish playing</button>
+        </div>
+        
+        <button class="reset">reset</button>
+    </div>
+    
+    <div class="results">
+        
+        <div class="thisRound">
+            <h3 class="round">This round</h3>
+            <p class="roundResult"></p>
+        </div>
 
+
+        <div class="allRounds">
+            <h3 class="rounds">Rounds</h3>
+            <p class="roundsResult"></p>
+        </div>
+
+
+        <div class="score">
+            <h3 class="scoreWord">Score</h3>
+            <p class="scoreContent"></p>
+        </div>
+           
+    </div>
+    
 </body>
 </html>
